@@ -1,0 +1,7 @@
+---
+wordpress_image: wordpress
+wordpress_name: wp
+host: 127.0.0.1
+user: wp
+password: "1"
+name: wp

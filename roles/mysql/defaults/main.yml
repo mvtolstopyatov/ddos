@@ -2,3 +2,6 @@
 mysql_image: mysql:5.7
 mysql_name: Mysql
 root_password: "1"
+database: "wp"
+user: "wp"
+password: "1"

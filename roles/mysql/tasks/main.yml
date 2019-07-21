@@ -10,8 +10,8 @@
           restart_policy: unless-stopped
           env:
                   MYSQL_ROOT_PASSWORD: "{{root_password}}"
-                  MYSQL_DATABASE: "wp"
-                  MYSQL_USER: "wp"
-                  MYSQL_PASSWORD: "1"
+                  MYSQL_DATABASE: "{{database}}"
+                  MYSQL_USER: "{{user}}"
+                  MYSQL_PASSWORD: "{{password}}"
           volumes:
                   - /opt/mysql/data:/var/lib/mysql

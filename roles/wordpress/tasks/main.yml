@@ -1,11 +1,11 @@
 - name: Start wordpress docker
   docker_container:
-   image: wordpress
-   name: WP
+   image: "{{wordpress_image}}"
+   name: "{{wordpress_name}}"
    network_mode: host
    restart_policy: unless-stopped
    env:
-      WORDPRESS_DB_HOST: 127.0.0.1
-      WORDPRESS_DB_USER: wp
-      WORDPRESS_DB_PASSWORD: "1"
-      WORDPRESS_DB_NAME: wp
+      WORDPRESS_DB_HOST: "{{host}}"
+      WORDPRESS_DB_USER: "{{user}}"
+      WORDPRESS_DB_PASSWORD: "{{password}}"
+      WORDPRESS_DB_NAME: "{{name}}"
