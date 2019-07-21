@@ -1,0 +1,17 @@
+- name: Create folders for mysql
+  file: path=/opt/mysql/data state=directory
+
+
+- name: Start mysql docker 
+  docker_container:
+          image: "{{mysql_image}}"
+          name: "{{mysql_name}}"
+          network_mode: host
+          restart_policy: unless-stopped
+          env:
+                  MYSQL_ROOT_PASSWORD: "{{root_password}}"
+                  MYSQL_DATABASE: "wp"
+                  MYSQL_USER: "wp"
+                  MYSQL_PASSWORD: "1"
+          volumes:
+                  - /opt/mysql/data:/var/lib/mysql

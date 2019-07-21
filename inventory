@@ -1,0 +1,5 @@
+[local]
+localhost ansible_connection=local
+
+[mysql-server]
+172.16.50.12

@@ -1,0 +1,8 @@
+---
+- name: Install wordpress with mysql
+  hosts: local
+  remote_user: mihail
+  become: yes
+  roles:
+          - roles/mysql
+          - roles/wordpress
